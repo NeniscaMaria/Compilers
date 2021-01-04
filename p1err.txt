@@ -1,13 +1,4 @@
 main{
-    number a,i=09_
-    display("a= ")_
-    userInput(a)_
-    truth isPrime=True _
-    loop(i; i<a/2 and isPrime; i+1){
-        check(a % i){
-            isPrime=False_
-        }
-    }
-    display("The number is prime?)_
-    display(isPrime)_
+    number a_
+    a=10+1
 }

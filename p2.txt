@@ -10,6 +10,6 @@ main{
             isPrime=False_
         }
     }
-    display("The number is prime? ")_
+    display("The number is prime?")_
     display(isPrime)_
 }

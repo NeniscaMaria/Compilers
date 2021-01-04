@@ -14,7 +14,7 @@ class Main {
         stFile.close();
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         FA fa_id = new FA("FA_id.in");
         FA fa_const_number = new FA("Fa_const_number.in");
@@ -22,9 +22,19 @@ class Main {
         try {
             LexicalScanner lexicalScanner = new LexicalScanner(fa_id, fa_const_number, fa_const_string);
             resetFiles();
-            lexicalScanner.scan("p1err.txt");
-        } catch (IOException e) {
+            lexicalScanner.scan("p1.txt");
+            Grammar grammar = new Grammar("grammar.txt");
+            Parser parser = new Parser(grammar);
+            ParseOutput parseOutput = new ParseOutput(parser, grammar);
+            PIF pif = new PIF("PIF.out");
+            ParseTree tree = parseOutput.parse(pif.getCodes());
+            if (tree != null) {
+                System.out.println(tree);
+                tree.writeToFile("out.txt");
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 }

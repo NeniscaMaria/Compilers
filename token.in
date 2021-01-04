@@ -32,10 +32,8 @@ userInput : 30
 check : 31
 fail : 32
 loop : 33
-and : 34
-or : 35
 main : 36
-True : 37
-False : 38
+true : 37
+false : 38
 , : 39
 ; : 40
